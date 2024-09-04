@@ -7,9 +7,11 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <Routes>
-        <Route path='/' element={<Home />} />
-      </Routes>
+      <div style={{ width: '100%', height: 'auto' }}>
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </div>
     </div>
   );
 }
