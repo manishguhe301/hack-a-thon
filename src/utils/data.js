@@ -29,3 +29,8 @@ export const AIChallengesData = [
       'You will stand out from the crowd if you do well in AI challenges, it not only helps you shine in the community but also earns rewards.',
   },
 ];
+
+
+export const status = ['All', 'Active', 'Upcoming', 'Past'];
+
+export const levels = ['Easy', 'Medium', 'Hard'];
