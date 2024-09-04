@@ -1,0 +1,68 @@
+[
+  {
+    "id": 0,
+    "name": "Data Science Bootcamp - Graded Datathon",
+    "startDate": "01/Oct/2024, 10:00:am",
+    "endDate": "10/Oct/2024, 10:00:am",
+    "status": "",
+    "tagLine": "Challenge your data science skills in a competitive environment.",
+    "description": "Participate in a graded datathon where you'll apply your data science knowledge to real-world problems. This bootcamp will test your skills and provide valuable feedback to help you improve.",
+    "image": 1,
+    "level": "Easy"
+  },
+  {
+    "id": 1,
+    "name": "Data Sprint 72 - Butterfly Identification",
+    "startDate": "01/Sep/2024, 10:00:am",
+    "endDate": "30/Sep/2024, 10:00:am",
+    "status": "active",
+    "tagLine": "Build an advanced image classification model for wildlife conservation.",
+    "description": "An exciting challenge where you develop an image classification model to identify different butterfly species. This project involves creating an automated system using computer vision techniques to assist in wildlife conservation efforts.",
+    "image": 3,
+    "level": "Hard"
+  },
+  {
+    "id": 2,
+    "name": "Data Science Bootcamp - Weather Recognition",
+    "startDate": "01/Mar/2025, 10:00:am",
+    "endDate": "10/Mar/2025, 10:00:am",
+    "status": "",
+    "tagLine": "Enhance your skills with practical weather recognition tasks.",
+    "description": "Join this bootcamp to work on weather recognition tasks. You'll engage with real data to build models that classify different weather conditions, honing your data science skills through practical applications.",
+    "image": 4,
+    "level": "Medium"
+  },
+  {
+    "id": 3,
+    "name": "Data Sprint 70 - Airline Passenger Satisfaction",
+    "startDate": "06/Jan/2023, 10:00:am",
+    "endDate": "16/Jan/2023, 10:00:am",
+    "status": "",
+    "tagLine": "Analyze and improve airline passenger satisfaction through data.",
+    "description": "This data sprint focuses on analyzing airline passenger satisfaction. Use your data science skills to derive insights and propose improvements based on passenger feedback and satisfaction metrics.",
+    "image": 5,
+    "level": "Easy"
+  },
+  {
+    "id": 4,
+    "name": "Engineering Graduates Employment Outcomes",
+    "startDate": "15/Jan/2023, 10:00:am",
+    "endDate": "25/Jan/2023, 10:00:am",
+    "status": "",
+    "tagLine": "Evaluate employment outcomes for engineering graduates.",
+    "description": "In this project, you'll analyze employment outcomes for engineering graduates. Your task is to uncover patterns and factors that influence job placement and career success in the engineering field.",
+    "image": 6,
+    "level": "Hard"
+  },
+  {
+    "id": 5,
+    "name": "Travel Insurance Claim Prediction",
+    "startDate": "20/Nov/2024, 10:00:am",
+    "endDate": "25/Nov/2024, 10:00:am",
+    "status": "",
+    "tagLine": "Predict travel insurance claims using advanced data techniques.",
+    "description": "Develop a model to predict travel insurance claims. This project involves analyzing travel data to forecast potential claims and improve insurance policy effectiveness.",
+    "image": 2,
+    "level": "Easy"
+  }
+]
