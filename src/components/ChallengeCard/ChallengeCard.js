@@ -58,7 +58,6 @@ const ChallengeCard = ({ data, id }) => {
 
       if (status !== currentStatus) {
         setCurrentStatus(status);
-        console.log(`Status updated to: ${status}`);
       }
 
       if (status === 'past') {
@@ -77,7 +76,6 @@ const ChallengeCard = ({ data, id }) => {
     const updateTimeLeft = () => {
       const tl = calculateTimeLeft();
       setTimeLeft(tl);
-      console.log(`Time Left: ${tl.days}d ${tl.hours}h ${tl.mins}m`);
     };
 
     updateTimeLeft();
