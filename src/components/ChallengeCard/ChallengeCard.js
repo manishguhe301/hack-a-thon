@@ -16,6 +16,7 @@ import {
   Colon,
   Counter,
   CounterLabel,
+  CounterWrapper,
   DateText,
   ParticipateButton,
   StartOrEndStatus,
@@ -128,7 +129,7 @@ const ChallengeCard = ({ data, id }) => {
 
           <TimerOrDate>
             {currentStatus === 'active' || currentStatus === 'upcoming' ? (
-              <div style={{ display: 'flex', alignItems: 'center' }}>
+              <CounterWrapper>
                 <Counter>
                   <span>{timeLeft.days}</span>
                   <CounterLabel>Days</CounterLabel>
@@ -143,7 +144,7 @@ const ChallengeCard = ({ data, id }) => {
                   <span>{timeLeft.mins}</span>
                   <CounterLabel>Mins</CounterLabel>
                 </Counter>
-              </div>
+              </CounterWrapper>
             ) : (
               <DateText>{formatDate(data?.endDate)}</DateText>
             )}

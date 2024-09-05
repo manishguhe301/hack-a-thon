@@ -71,6 +71,12 @@ export const TimerOrDate = styled.div`
   margin-bottom: 20px;
 `;
 
+export const CounterWrapper = styled.div`
+  display: flex;
+  align-items: start;
+  gap: 5px;
+`;
+
 export const Counter = styled.span`
   display: flex;
   flex-direction: column;
