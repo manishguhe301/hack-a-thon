@@ -66,15 +66,43 @@ const CreateChallengeForm = () => {
     }));
   };
 
+  const validateChallenge = (challenge) => {
+    const { name, level, startDate, endDate, description, image } = challenge;
+    if (!name.trim()) return 'Challenge Name is required';
+    if (!startDate) return 'Start Date is required';
+    if (!endDate) return 'End Date is required';
+    if (new Date(startDate) >= new Date(endDate))
+      return 'End Date should be later than Start Date';
+    if (!description.trim()) return 'Description is required';
+    if (!level) return 'Level Type is required';
+    if (!image) return 'Image is required';
+
+    return '';
+  };
+
+  const displayMessage = (msg) => {
+    setMessage(msg);
+    document.documentElement.scrollIntoView({
+      behavior: 'smooth',
+    });
+    setTimeout(() => setMessage(''), 3000);
+  };
+
   const submitChallenge = (e) => {
     e.preventDefault();
-    const { name, level, startDate, endDate, description } = challenge;
-    if (name && level && startDate && endDate && description) {
-      setMessage('Successfully Created Challenge');
-      data.push(challenge);
-    } else {
-      setMessage('Please Fill All Fields');
+    const validationMessage = validateChallenge(challenge);
+
+    if (validationMessage) {
+      displayMessage(validationMessage);
+      return;
     }
+
+    const successMessage = id
+      ? 'Successfully Updated Challenge'
+      : 'Successfully Created Challenge';
+
+    displayMessage(successMessage);
+    data.push(challenge);
   };
 
   return (
