@@ -302,7 +302,7 @@ export const Button = styled.button`
 
 export const PreviousBannerWrapper = styled.div`
   width: 300px;
-  height: auto;
+  height: 150px;
   border-radius: 5px;
   margin-top: 10px;
   overflow: hidden;
@@ -312,4 +312,5 @@ export const Banner = styled.img`
   width: 100%;
   height: auto;
   transform: scale(1.1);
+  object-fit: cover;
 `;

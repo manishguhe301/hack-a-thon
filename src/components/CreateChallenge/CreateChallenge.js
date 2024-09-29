@@ -59,11 +59,20 @@ const CreateChallengeForm = () => {
   const [message, setMessage] = useState('');
 
   const handleChallengeFields = (e) => {
-    const { name, value } = e.target;
-    setChallenge((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    const { name, value, files } = e.target;
+    if (name === 'image' && files.length > 0) {
+      const selectedFile = URL.createObjectURL(files[0]);
+      setChallenge((prev) => ({
+        ...prev,
+        image: selectedFile,
+      }));
+      console.log(selectedFile);
+    } else {
+      setChallenge((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
   };
 
   const validateChallenge = (challenge) => {
@@ -169,7 +178,12 @@ const CreateChallengeForm = () => {
         <InputLabelWrapper>
           <Label htmlFor='image__upload'>Image</Label>
           <span>
-            <FileField type='file' id='image__upload' />
+            <FileField
+              type='file'
+              id='image__upload'
+              name='image'
+              onChange={handleChallengeFields}
+            />
             <UpLoadLabel htmlFor='image__upload'>
               Upload <UploadImage src={cloud} alt='cloud' />
             </UpLoadLabel>
@@ -178,7 +192,7 @@ const CreateChallengeForm = () => {
           {(challenge.image || id) && (
             <PreviousBannerWrapper>
               <Banner
-                src={images[challenge.image - 1]}
+                src={images[challenge.image - 1] || challenge.image}
                 alt='challenge-banner'
               />
             </PreviousBannerWrapper>

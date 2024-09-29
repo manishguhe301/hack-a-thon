@@ -101,7 +101,7 @@ const ChallengeCard = ({ data, id }) => {
       <Link to={`/challenge-details/${id}`}>
         <CardBanner>
           <CardImage
-            src={images[data?.image - 1]}
+            src={images[data?.image - 1] || data.image}
             alt='card_img'
             onError={(e) => {
               e.target.onerror = null;

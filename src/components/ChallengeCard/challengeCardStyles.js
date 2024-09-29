@@ -9,7 +9,7 @@ export const CardSection = styled.div`
 
 export const CardBanner = styled.div`
   width: 100%;
-  height: auto;
+  height: 150px;
 `;
 
 export const CardImage = styled.img`
