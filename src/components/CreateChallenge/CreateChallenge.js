@@ -110,8 +110,17 @@ const CreateChallengeForm = () => {
       ? 'Successfully Updated Challenge'
       : 'Successfully Created Challenge';
 
+    if (id) {
+      const challengeIndex = data.findIndex((item) => item.id === parseInt(id));
+      if (challengeIndex !== -1) {
+        data[challengeIndex] = { ...data[challengeIndex], ...challenge };
+      }
+    } else {
+      challenge.id = data.length;
+      data.push(challenge);
+    }
+
     displayMessage(successMessage);
-    data.push(challenge);
   };
 
   return (

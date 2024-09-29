@@ -212,7 +212,7 @@ const EditBtn = styled(Link)`
   }
 `;
 
-const DelBtn = styled(Link)`
+const DelBtn = styled.button`
   display: inline-block;
   padding: 4px 10px;
   border-radius: 8px;
